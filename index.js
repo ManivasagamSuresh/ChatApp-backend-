@@ -21,7 +21,7 @@ const pusher = new Pusher({
 
 app.use(express.json());
 app.use(cors({
-    origin : "http://localhost:3000"
+    origin : "https://capable-gelato-a223ec.netlify.app"
 }))
 
 
