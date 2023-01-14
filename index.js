@@ -6,7 +6,6 @@ const messages = require('./dbMessages');
 const Pusher = require("pusher");
 const env = require('dotenv').config();
 const dbURL = process.env.dbURL
-// const dbURL = "mongodb+srv://manivasagam:atshu.mani@cluster0.6ygdx25.mongodb.net/chat?retryWrites=true&w=majority"
 const app = express();
 
 
