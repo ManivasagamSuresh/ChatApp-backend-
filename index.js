@@ -19,9 +19,16 @@ const pusher = new Pusher({
 
 
 app.use(express.json());
+
 app.use(cors({
     origin : "https://capable-gelato-a223ec.netlify.app"
 }))
+
+
+
+// app.use(cors({
+//     origin : "http://localhost:3000"
+// }))
 
 
 mongoose.connect(dbURL);
@@ -36,7 +43,7 @@ changeStream.on('change',(change)=>{
 
     if(change.operationType === "insert"){
         const roomDetails = change.fullDocument;
-        pusher.trigger("rooms", "inserted",roomDetails); // from pusher website (model)
+        pusher.trigger("rooms", "inserted",roomDetails); //stntax from pusher website (model)
     }else{
         console.log("not expected event to trigger")
     }
